@@ -1,0 +1,23 @@
+{% extends 'accounts/main.html' %}
+{%load static%}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+<form method="post" action="">
+    {% csrf_token %}
+    <div style="color:red;">{{form.customer}}</div>
+    <div style="color:red;">{{form.product}}</div>
+    <div style="color:red;">{{form.status}}</div>
+
+
+
+    <button type="button submit" class="btn btn-primary" name="Submit">Submit</button>
+</form>
+
+           </div>
+	</div>
+</div>
+
+{% endblock %}
